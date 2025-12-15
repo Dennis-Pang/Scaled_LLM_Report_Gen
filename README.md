@@ -86,3 +86,11 @@ Key details:
 
 The script prints the structured JSON response to stdout, which is the data
 you can feed into downstream tooling or reporting pipelines.
+
+### Example output
+
+Below is a sample structured JSON response:
+
+```json
+{"diagnosis":"Type 2 diabetes with mild neuropathy","medications":["metformin 1g BID","gabapentin 100mg nightly"],"allergies":["penicillin"],"follow_up":"4 weeks"}
+```
