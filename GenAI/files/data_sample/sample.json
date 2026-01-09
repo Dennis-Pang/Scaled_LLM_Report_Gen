@@ -1,0 +1,6 @@
+{
+  "diagnosis": "Hypertension",
+  "medications": ["Lisinopril 10mg daily", "Vitamin D 1000 IU"],
+  "allergies": ["Penicillin"],
+  "follow_up": "Follow up in 4 weeks; monitor blood pressure at home."
+}
