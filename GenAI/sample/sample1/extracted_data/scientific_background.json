@@ -1,0 +1,53 @@
+{
+  "title": "The Science Behind Nextherapy",
+  "summary": "Nextherapy's interventions have a strong focus on intensity, repetition, and specificity, often involving the use of robotics and technologies to optimally activate activity-dependent brain plasticity, which can have significantly positive effects on recovery from brain damage.",
+  "key_findings": [
+    {
+      "topic": "Intensity and Plasticity",
+      "description": "Intensive programs with 25 to 30 therapy hours per week have shown improvements that are twice as high as other interventions with lower intensity.",
+      "references": ["Daly J et al 2019", "Lohse KR et al 2014", "Lang CE et al 2016", "Rodgers H, 2019"],
+      "image": {
+        "path": "scientific_background/intensity_therapy_chart.jpg",
+        "label": "Therapy intensity and outcomes",
+        "context": "Comparison of therapy outcomes at different intensities"
+      }
+    },
+    {
+      "topic": "Activity-Dependent Plasticity",
+      "description": "Intensity is an important factor for recovery, and there is sufficient evidence that clinically significant improvements are possible months or years after injury when adequate therapy is provided by increasing plasticity.",
+      "references": ["Kwakkel G, 2004", "Veerbeek J.M 2014", "Spiess M.R, 2017", "Schneider E, 2016"],
+      "image": {
+        "path": "scientific_background/brain_plasticity_research.jpg",
+        "label": "Brain plasticity research",
+        "context": "Scientific basis of activity-dependent plasticity"
+      }
+    },
+    {
+      "topic": "Long-term Recovery",
+      "description": "There is sufficient evidence that clinically significant improvements are possible months or years after injury when adequate therapy is provided, thus opening a new window for recovery.",
+      "references": ["Mc Cabe J, 2015", "Daly J 2019", "Ward N, 2019"],
+      "image": {
+        "path": "scientific_background/therapy_timeline.png",
+        "label": "Therapy timeline",
+        "context": "Temporal course of recovery possibilities"
+      }
+    },
+    {
+      "topic": "Structural Changes in the Brain",
+      "description": "One hypothesis is that it triggers structural, plastic changes in the brain. The figure shows changes in the brain area representing the fingers after 5 days of training.",
+      "references": ["Pascual-Leone et al 2005"],
+      "images": [
+        {
+          "path": "scientific_background/brain_region_diagram.png",
+          "label": "Brain regions",
+          "context": "Representation of affected brain areas"
+        },
+        {
+          "path": "scientific_background/brain_training_changes.png",
+          "label": "Changes after training",
+          "context": "Changes in brain area after 5 days of training (Pascual-Leone et al 2005)"
+        }
+      ]
+    }
+  ]
+}

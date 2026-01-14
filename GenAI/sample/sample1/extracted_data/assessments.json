@@ -1,0 +1,94 @@
+{
+  "six_minute_walk_test": {
+    "description": "Measures walking distance over 6 minutes. A rollator was used as an assistive device.",
+    "baseline": {
+      "date": "2022-06",
+      "distance_meters": 233,
+      "aid": "Rollator"
+    },
+    "current": {
+      "date": "2022-12",
+      "distance_meters": 246,
+      "aid": "Rollator"
+    },
+    "improvement": {
+      "absolute": 13,
+      "interpretation": "Walking distance improved by 13 meters from June 2022 to December 2022. The reason is increased mobility."
+    }
+  },
+  "c_mill_assessment": {
+    "description": "Measures gait on a treadmill. The 2-minute walk test was performed with a body weight support harness (12 kg weight relief) and bilateral handrail support.",
+    "baseline": {
+      "date": "2022-06",
+      "distance_2min_meters": 72.9,
+      "speed_kmh": 2.2,
+      "step_length_left_m": 0.406,
+      "step_length_right_m": 0.397
+    },
+    "current": {
+      "date": "2022-10",
+      "distance_2min_meters": 72.8,
+      "speed_kmh": 2.2,
+      "step_length_left_m": 0.386,
+      "step_length_right_m": 0.363
+    },
+    "interpretation": "Performance and step length in the 2-minute treadmill test remain unchanged when comparing both tests.",
+    "spatial_temporal": {
+      "description": "The green area in the spatial results shows the average step length over the specified period. The dotted line reflects the average left step length. If it lies within the green area, the gait pattern is symmetrical.",
+      "images": [
+        {
+          "path": "lokomat_assessment/cmill_spatial_june2022.png",
+          "label": "June 2022",
+          "context": "Spatial and temporal gait analysis baseline"
+        },
+        {
+          "path": "lokomat_assessment/cmill_spatial_october2022.png",
+          "label": "October 2022",
+          "context": "Spatial and temporal gait analysis follow-up"
+        }
+      ]
+    },
+    "butterfly_diagram": {
+      "description": "Gait symmetry (CoP Gaitogram): When walking on the C-Mill, the center of pressure (CoP) is captured by the force plate. The CoP profile is a repeating trajectory in the shape of a butterfly.",
+      "interpretation": "In the right graphic, a clearly improved, symmetrical, and wider butterfly can be observed. The reason is improved overall mobility with better shifting of the center of gravity during walking, which is reflected in a better dynamic gait pattern. When shifting the center of gravity to the left, instability is observed, which is explained by the stronger inclination of the body to the right. In the left swing phase, however, it can be observed that she is unsteady and unstable until she brings the foot back into the stance phase (the line is curved).",
+      "images": [
+        {
+          "path": "lokomat_assessment/cmill_butterfly_june2022.jpg",
+          "label": "June 2022",
+          "context": "CoP gaitogram butterfly baseline"
+        },
+        {
+          "path": "lokomat_assessment/cmill_butterfly_october2022.jpg",
+          "label": "October 2022",
+          "context": "CoP gaitogram butterfly follow-up - improved symmetry"
+        }
+      ]
+    },
+    "stability_limit": {
+      "description": "The stability limits are symmetrical when she actively leans her body forward, backward, and to the sides.",
+      "images": [
+        {
+          "path": "lokomat_assessment/cmill_stability_limits.jpg",
+          "label": "Stability limits",
+          "context": "C-Mill stability limit test - active body leaning in all directions"
+        }
+      ]
+    },
+    "postural_stability": {
+      "description": "Postural stability is good when she is in a static position with parallel feet, even when she closes her eyes. In the tandem stance, however, there is a tendency to shift weight to the right, which can be explained by Pisa syndrome.",
+      "metrics": {
+        "eyes_open_cms": 7.85,
+        "eyes_closed_cms": 7.31,
+        "tandem_stand_cms": 7.79,
+        "single_leg_cms": 7.02
+      },
+      "images": [
+        {
+          "path": "lokomat_assessment/cmill_postural_stability.png",
+          "label": "Postural stability",
+          "context": "C-Mill postural stability - static position with parallel feet, eyes open/closed, tandem stance"
+        }
+      ]
+    }
+  }
+}

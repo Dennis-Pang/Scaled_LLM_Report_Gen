@@ -1,0 +1,29 @@
+{
+  "intensity": "3 times per week physiotherapy",
+  "programs": {
+    "mobility": {
+      "first_movements": false,
+      "functional_walking": true,
+      "advanced_walking": false
+    },
+    "balance_coordination": {
+      "basic_control": false,
+      "initial_stability": false,
+      "advanced_coordination": true
+    },
+    "hands_arms_adl": {
+      "first_movements": false,
+      "basic_functions": false,
+      "adl": true,
+      "participation": false
+    }
+  },
+  "devices_used": ["C-Mill", "Rysen", "Telko"],
+  "recommendation": "Since the patient shows improvement in her posture and gait after two weeks of daily 1-hour physiotherapy, we recommend continuing treatment at least 3 times per week to maintain improvements in posture and gait and to reduce fall risk.",
+  "prescription": {
+    "physiotherapy_code": "7311",
+    "tariff_points": 77,
+    "description": "Basic Neuro-Physiotherapy",
+    "note": "For Lokomat therapy, 2x7311 is required per therapy session."
+  }
+}

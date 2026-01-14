@@ -1,37 +1,88 @@
-# GenAI Project
+# GenAI VLM Summary Workflow
 
-This project demonstrates a complete workflow for processing medical notes: extracting structured data using a Large Language Model (LLM) and generating a professional PDF report.
+Local SGLang client + helpers for generating VLM summaries from sample data.
 
-## Workflow Overview
+## Directory Layout
 
-The system operates in two main stages:
+```
+sample/
+  sample1/
+    extracted_data/        # JSON + images (input to VLM)
+      patient_info.json
+      anamnesis.json
+      therapy_goals.json
+      assessments.json
+      therapy_program.json
+      scientific_background.json
+      lokomat_assessment/  # images referenced by JSON
+      scientific_background/
+    Verlauf26.pdf          # original PDF (outside extracted_data)
+    summary.txt            # generated output (optional)
+LLM/
+  client.py                # SGLang client + server helpers
+  chat.py                  # interactive CLI chat
+scripts/
+  vlm_data_loader.py       # builds OpenAI/SGLang messages
+  pdf_extractor.py         # extracts images from a PDF
+generate_sum.py            # generate summary from a sample
+```
 
-### 1. Structured Data Extraction (`main.py`)
-The `main.py` script utilizes an LLM (connected via an OpenAI-compatible API) to analyze unstructured medical text. It extracts key information based on a defined Pydantic schema, for example:
-- Diagnosis
-- Medications
-- Allergies
-- Follow-up instructions
+## Quick Start
 
-### 2. PDF Report Generation
-Once the structured data is obtained, it is processed to create a final report:
-- **Template**: The `files/template` directory contains the HTML template (`template.html`) which defines the report's layout and styling.
-- **Rendering**: The processed data is injected into the HTML template.
-- **Conversion**: The populated HTML is converted into a PDF file using the `files/render_pdf.py` script.
+1) Start the SGLang server (interactive GPU selection):
+```
+python -m LLM.client start
+```
 
-## Directory Structure
+2) Chat (text or multimodal):
+```
+python -m LLM.chat
+python -m LLM.chat --text "Describe this image" --image sample/sample1/extracted_data/lokomat_assessment/cmill_butterfly_june2022.jpg
+```
 
-- **`main.py`**: The core script for interfacing with the model to generate structured data.
-- **`files/`**:
-  - **`template/`**: Stores the HTML template (`template.html`) used for the report.
-  - **`data_sample/`**: Contains sample structured data (e.g., `sample.json`).
-  - **`render_pdf.py`**: The script responsible for reading the data, populating the template, and rendering the PDF.
-  - **`output.pdf`**: The resulting PDF report.
+3) Generate a summary:
+```
+python generate_sum.py --sample-id sample1 --output sample/sample1/summary.txt
+```
 
-## Usage
+## Common Commands
 
-To generate a PDF report from the sample data:
+### Client (server management)
+```
+python -m LLM.client gpus
+python -m LLM.client check --model Qwen/Qwen3-VL-32B-Instruct
+python -m LLM.client test --base-url http://127.0.0.1:30000/v1
+python -m LLM.client start --model Qwen/Qwen3-VL-32B-Instruct --gpus 0,1
+```
 
-```bash
-python files/render_pdf.py
+### Chat (interactive or one-shot)
+```
+python -m LLM.chat
+python -m LLM.chat --text "Hello"
+python -m LLM.chat --text "Describe this image" --image /path/to/image.png
+```
+
+### Build Messages in Python
+```
+from LLM.client import SGLangLLM
+from scripts.vlm_data_loader import PatientDataLoader
+
+loader = PatientDataLoader("sample1")
+messages = loader.build_vlm_messages()
+
+llm = SGLangLLM(auto_start=False, gpu_ids=[0])
+print(llm.chat_messages(messages))
+```
+
+## Data Notes
+
+- All JSON and images must live under `sample/<id>/extracted_data`.
+- Image paths inside JSON are relative to `extracted_data/`.
+- The original PDF (if present) should sit in `sample/<id>/`.
+
+## Proxy Note
+
+If your environment uses a proxy, local calls should bypass it:
+```
+NO_PROXY=127.0.0.1,localhost python -m LLM.client test
 ```

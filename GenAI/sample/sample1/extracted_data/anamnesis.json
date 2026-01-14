@@ -1,0 +1,17 @@
+{
+  "anamnesis_text": "The patient presents with anterior trunk inclination, with right-sided tilt due to Pisa syndrome. Outdoors she uses a rollator, in her apartment she occasionally walks freely. Due to the forward-shifted center of gravity, her fall risk is high, with frequent falls occurring in her apartment (weekly). The physiotherapy sessions focus on improving trunk alignment through stretching of muscles such as the iliopsoas, rectus femoris, pectoralis major, and latissimus dorsi.",
+  "safety_conditions": {
+    "depression_anxiety": true,
+    "epilepsy": false,
+    "catheter_peg": false,
+    "hearing_vision": false,
+    "sensory_disturbance": false,
+    "pain": true,
+    "pain_location": "right shoulder",
+    "open_wound": false,
+    "osteoporosis": true,
+    "swallowing_disorder": false,
+    "cancer": false
+  },
+  "therapy_history": "In early October 2022, the patient received Botox injections in the iliopsoas, rectus femoris, and obliquus abdominis (right side) to alleviate Pisa syndrome. In the last 3 months, the patient has walked less and often uses a wheelchair."
+}

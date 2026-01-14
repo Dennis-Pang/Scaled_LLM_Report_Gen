@@ -1,0 +1,24 @@
+{
+  "patient_id": "patient_001",
+  "name": "Anonymized Patient",
+  "birth_date": "1960-05-15",
+  "address": "Musterstrasse 123, 8000 Zurich",
+  "diagnosis": "Suspected idiopathic Parkinson's syndrome of the akinetic-rigid type, Hoehn & Yahr Stage III, onset 2017",
+  "doctor": {
+    "name": "Dr. Med. Müller",
+    "address": "Klinikstrasse 45, 8001 Zurich"
+  },
+  "insurance": {
+    "name": "Health Insurance AG",
+    "number": "123456789"
+  },
+  "report_date": "2022-12-21",
+  "clinic": {
+    "name": "Nextherapy AG",
+    "address": "Uraniastrasse 9",
+    "city": "8001 Zurich",
+    "phone": "+41 44 216 99 90",
+    "email": "nextherapy@hin.ch",
+    "website": "www.nextherapy.ch"
+  }
+}
